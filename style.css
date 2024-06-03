@@ -96,7 +96,7 @@ main {
     max-width: 100px;
     margin-bottom: 20px;
     margin-top: 20px;
-    border-radius: 5%; /* This makes the image round */
+    border-radius: 5%; 
 }
 
 .project-item h3 {
