@@ -37,6 +37,11 @@ header::before {
     z-index: 1;
 }
 
+.logo-image {
+    width: 200px; 
+    height: auto; 
+}
+
 nav ul {
     list-style: none;
     display: flex;
@@ -91,7 +96,7 @@ main {
     max-width: 100px;
     margin-bottom: 20px;
     margin-top: 20px;
-    border-radius: 50%; /* This makes the image round */
+    border-radius: 5%; /* This makes the image round */
 }
 
 .project-item h3 {
