@@ -1,7 +1,11 @@
-body {
-    font-family: Arial, sans-serif;
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
     background-color: #f0f0f0;
 }
 
@@ -10,31 +14,18 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 20px;
-    background-color: rgba(255, 255, 255, 0.8);
-    position: relative;
-    overflow: hidden;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-header::before {
-    content: "";
     position: absolute;
+    width: 100%;
     top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-image: url('images/bgbar.jpg');
-    background-size: cover;
-    background-position: center;
-    filter: blur(0px);
-    z-index: -1;
+    z-index: 10;
+    background: none; /* Remove the white background */
 }
 
 .logo h1 {
     font-size: 24px;
-    color: #333;
+    color: #fff; /* Change text color to white for better visibility */
     position: relative;
-    z-index: 1;
+    z-index: 11;
 }
 
 .logo-image {
@@ -49,22 +40,56 @@ nav ul {
     margin: 0;
     padding: 0;
     position: relative;
-    z-index: 1;
+    z-index: 11;
 }
 
 nav ul li a {
     text-decoration: none;
-    color: #333;
+    color: #fff; /* Change text color to white for better visibility */
     font-size: 18px;
+}
+
+.hero {
+    height: 100vh;
+    background-image: url('images/bgbar.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    filter: blur(5px);
+    z-index: -1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    color: white;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.hero-content h1 {
+    font-size: 4rem;
+    font-weight: bold;
+}
+
+.hero-content span {
+    color: #1e90ff;
 }
 
 main {
     padding: 40px;
-    background-image: url('images/bgbar.jpg');
-    background-size: cover;
-    background-position: center;
-    filter: blur(0px);
-    z-index: -1;
+    background-color: white;
 }
 
 .project {
