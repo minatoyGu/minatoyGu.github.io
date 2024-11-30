@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Home - My Portfolio</title>
+    <title>Work Experience - My Portfolio</title>
     <!-- Link to external stylesheet -->
     <link rel="stylesheet" href="style.css">
     <!-- Link to Google Fonts for better typography -->
@@ -18,28 +18,33 @@
         </div>
         <nav>
             <ul class="nav-links">
-                <li><a href="index.html" class="nav-link active"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="index.html" class="nav-link"><i class="fas fa-home"></i> Home</a></li>
                 <li><a href="about.html" class="nav-link"><i class="fas fa-user"></i> About</a></li>
                 <li><a href="school-projects.html" class="nav-link"><i class="fas fa-graduation-cap"></i> School Projects</a></li>
                 <li><a href="personal-projects.html" class="nav-link"><i class="fas fa-code"></i> Personal Projects</a></li>
-                <li><a href="work-experience.html" class="nav-link"><i class="fas fa-briefcase"></i> Work Experience</a></li>
+                <li><a href="work-experience.html" class="nav-link active"><i class="fas fa-briefcase"></i> Work Experience</a></li>
             </ul>
         </nav>
     </aside>
 
     <!-- Main Content -->
     <main>
-        <!-- Hero Section with Video Background -->
-        <section class="hero">
-            <video autoplay muted loop class="hero-video">
-                <source src="videos/hero-video.mp4" type="video/mp4">
-                Your browser does not support HTML5 video.
-            </video>
-            <div class="hero-overlay"></div>
-            <div class="hero-content">
-                <h1>CREATING THE FUTURE<br>ONE STEP AT A <span>TIME</span></h1>
+        <!-- Work Experience Section -->
+        <section class="projects">
+            <div class="container">
+                <h2>Work Experience</h2>
+                <div class="work-experience-list">
+                    <!-- Work Experience Item -->
+                    <div class="work-experience-item">
+                        <img src="images/work-example.png" alt="Work Experience">
+                        <h4>Company Name</h4>
+                        <p>Position Held and brief description of your role and achievements.</p>
+                        <a href="#" class="btn">Learn More</a>
+                    </div>
+                </div>
             </div>
         </section>
+        
     </main>
 
     <!-- Include JavaScript for interactivity -->
