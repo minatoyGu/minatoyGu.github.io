@@ -4,11 +4,13 @@
     <meta charset="UTF-8">
     <title>About Me - Edwin Yeung</title>
     <!-- Link to external stylesheet -->
-    <link rel="stylesheet" href="style.css?v=2">
+    <link rel="stylesheet" href="style.css?v=3">
     <!-- Link to Google Fonts for better typography -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <!-- Include Font Awesome for icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <!-- Meta for responsive design -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
@@ -20,11 +22,10 @@
         </div>
         <nav>
             <ul class="nav-links">
-                <li><a href="index.html" class="nav-link"><i class="fas fa-home"></i><span>Home</span></a></li>
-                <li><a href="about.html" class="nav-link active"><i class="fas fa-user"></i><span>About</span></a></li>
-                <li><a href="school-projects.html" class="nav-link"><i class="fas fa-graduation-cap"></i><span>School Projects</span></a></li>
-                <li><a href="personal-projects.html" class="nav-link"><i class="fas fa-code"></i><span>Personal Projects</span></a></li>
-                <li><a href="work-experience.html" class="nav-link"><i class="fas fa-briefcase"></i><span>Work Experience</span></a></li>
+                <li><a href="index.html" class="nav-link"><i class="fas fa-home"></i> <span>Home</span></a></li>
+                <li><a href="about.html" class="nav-link active"><i class="fas fa-user"></i> <span>About</span></a></li>
+                <li><a href="portfolio.html" class="nav-link"><i class="fas fa-briefcase"></i> <span>Portfolio</span></a></li>
+                <li><a href="work-experience.html" class="nav-link"><i class="fas fa-briefcase"></i> <span>Work Experience</span></a></li>
             </ul>
         </nav>
     </aside>
@@ -34,21 +35,47 @@
         <!-- About Section -->
         <section class="about">
             <div class="container">
-                <h2>About Me</h2>
-                <div class="about-content">
-                    <img src="images/profile.png" alt="Profile Picture" class="profile-picture">
+                <h2 class="section-title" data-aos="fade-up">About Me</h2>
+                <div class="about-content" data-aos="fade-up" data-aos-delay="200">
+                    <div class="profile-section">
+                        <img src="images/profile.png" alt="Profile Picture" class="profile-picture" data-aos="zoom-in" data-aos-delay="300">
+                        <div class="profile-info">
+                            <h3 class="gradient-text">Edwin Yeung</h3>
+                            <p class="title">Junior Developer & Computer Engineering Graduate</p>
+                            <div class="social-links">
+                                <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                                <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                                <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                            </div>
+                        </div>
+                    </div>
                     <div class="bio">
-                        <p>Hello! I'm <strong>Edwin Yeung</strong>, a passionate developer specializing in creating innovative solutions. I have a strong interest in game development, mobile applications, and web development.</p>
-                        <p>With experience in various programming languages and technologies, I strive to deliver projects that not only meet but exceed expectations. I'm constantly learning and exploring new technologies to enhance my skill set.</p>
-                        <p>Feel free to explore my projects and get in touch if you'd like to collaborate or learn more about my work.</p>
-                        <!-- Add more personal information as needed -->
+                        <p data-aos="fade-up" data-aos-delay="400">Hi! I'm <strong>Edwin Yeung</strong>, a recent computer engineering graduate passionate about software, web, and game development. I enjoy learning new technologies and building creative solutions.</p>
+                        <p data-aos="fade-up" data-aos-delay="500">With experience from internships and personal projects, I'm eager to grow as a developer and contribute to meaningful work. I'm always open to new challenges and opportunities to collaborate.</p>
+                        <p data-aos="fade-up" data-aos-delay="600">Feel free to explore my portfolio and get in touch if you'd like to connect or learn more about my work.</p>
+                        <div class="about-stats" data-aos="fade-up" data-aos-delay="700">
+                            <div class="stat-item">
+                                <span class="stat-number">1+</span>
+                                <span class="stat-label">Years Coding</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">8+</span>
+                                <span class="stat-label">Projects Completed</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">6+</span>
+                                <span class="stat-label">Technologies Used</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
     </main>
 
-    <!-- Include JavaScript for interactivity (optional) -->
+    <!-- AOS Animation Library -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- Include JavaScript for interactivity -->
     <script src="script.js"></script>
 </body>
 </html>

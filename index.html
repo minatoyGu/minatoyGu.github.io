@@ -2,13 +2,16 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Home - My Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edwin Yeung - Portfolio</title>
     <!-- Link to external stylesheet -->
-    <link rel="stylesheet" href="style.css?v=2">
+    <link rel="stylesheet" href="style.css?v=3">
     <!-- Link to Google Fonts for better typography -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <!-- Include Font Awesome for icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
     <!-- Sidebar Navigation -->
@@ -18,30 +21,152 @@
         </div>
         <nav>
             <ul class="nav-links">
-                <li><a href="index.html" class="nav-link active"><i class="fas fa-home"></i> Home</a></li>
-                <li><a href="about.html" class="nav-link"><i class="fas fa-user"></i> About</a></li>
-                <li><a href="school-projects.html" class="nav-link"><i class="fas fa-graduation-cap"></i> School Projects</a></li>
-                <li><a href="personal-projects.html" class="nav-link"><i class="fas fa-code"></i> Personal Projects</a></li>
-                <li><a href="work-experience.html" class="nav-link"><i class="fas fa-briefcase"></i> Work Experience</a></li>
+                <li><a href="index.html" class="nav-link active"><i class="fas fa-home"></i> <span>Home</span></a></li>
+                <li><a href="about.html" class="nav-link"><i class="fas fa-user"></i> <span>About</span></a></li>
+                <li><a href="portfolio.html" class="nav-link"><i class="fas fa-briefcase"></i> <span>Portfolio</span></a></li>
+                <li><a href="work-experience.html" class="nav-link"><i class="fas fa-briefcase"></i> <span>Work Experience</span></a></li>
             </ul>
         </nav>
     </aside>
 
     <!-- Main Content -->
     <main>
-        <!-- Hero Section with Video Background -->
+        <!-- Hero Section -->
         <section class="hero">
-            <video autoplay muted loop class="hero-video">
-                <source src="videos/hero-video.mp4" type="video/mp4">
-                Your browser does not support HTML5 video.
-            </video>
-            <div class="hero-overlay"></div>
-            <div class="hero-content">
-                <h1>CREATING THE FUTURE<br>ONE STEP AT A <span>TIME</span></h1>
+            <div class="hero-background">
+                <div class="hero-particles"></div>
+            </div>
+            <div class="hero-content" data-aos="fade-up" data-aos-duration="1000">
+                <div class="hero-text">
+                    <h1 class="hero-title">
+                        <span class="gradient-text">Edwin Yeung</span>
+                    </h1>
+                    <p class="hero-subtitle">Junior Developer & Computer Engineering Graduate</p>
+                    <p class="hero-description">Creating innovative digital experiences through code, design, and creativity</p>
+                    <div class="hero-buttons">
+                        <a href="portfolio.html" class="btn btn-primary">
+                            <i class="fas fa-eye"></i>
+                            View Portfolio
+                        </a>
+                        <a href="about.html" class="btn btn-secondary">
+                            <i class="fas fa-user"></i>
+                            About Me
+                        </a>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="floating-card">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <div class="floating-card">
+                        <i class="fas fa-gamepad"></i>
+                    </div>
+                    <div class="floating-card">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Projects Section -->
+        <section class="featured-projects">
+            <div class="container">
+                <h2 class="section-title" data-aos="fade-up">Featured Projects</h2>
+                <div class="projects-grid">
+                    <div class="project-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="project-image">
+                            <img src="images/CampMate-Icon.png" alt="CampMate">
+                            <div class="project-overlay">
+                                <a href="portfolio.html" class="btn btn-sm">View Details</a>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3>CampMate</h3>
+                            <p>Mobile camping companion app with real-time weather and location services</p>
+                            <div class="project-tags">
+                                <span class="tag">React Native</span>
+                                <span class="tag">Firebase</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="project-image">
+                            <img src="images/BulletHellShooter-Icon.png" alt="Bullet Hell Shooter">
+                            <div class="project-overlay">
+                                <a href="portfolio.html" class="btn btn-sm">View Details</a>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3>Bullet Hell Shooter</h3>
+                            <p>Intense arcade-style shooter game with dynamic enemy patterns</p>
+                            <div class="project-tags">
+                                <span class="tag">Unity</span>
+                                <span class="tag">C#</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card" data-aos="fade-up" data-aos-delay="300">
+                        <div class="project-image">
+                            <img src="images/HoverCopy-Icon.png" alt="HoverCopy">
+                            <div class="project-overlay">
+                                <a href="portfolio.html" class="btn btn-sm">View Details</a>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3>HoverCopy</h3>
+                            <p>Browser extension for enhanced copy-paste functionality</p>
+                            <div class="project-tags">
+                                <span class="tag">JavaScript</span>
+                                <span class="tag">Chrome API</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section class="skills-section">
+            <div class="container">
+                <h2 class="section-title" data-aos="fade-up">Skills & Technologies</h2>
+                <div class="skills-grid">
+                    <div class="skill-category" data-aos="fade-up" data-aos-delay="100">
+                        <h3><i class="fas fa-code"></i> Programming</h3>
+                        <div class="skill-items">
+                            <span class="skill-item">JavaScript</span>
+                            <span class="skill-item">Python</span>
+                            <span class="skill-item">C#</span>
+                            <span class="skill-item">Java</span>
+                            <span class="skill-item">HTML/CSS</span>
+                        </div>
+                    </div>
+                    <div class="skill-category" data-aos="fade-up" data-aos-delay="200">
+                        <h3><i class="fas fa-gamepad"></i> Game Development</h3>
+                        <div class="skill-items">
+                            <span class="skill-item">Unity</span>
+                            <span class="skill-item">Unreal Engine</span>
+                            <span class="skill-item">Game Design</span>
+                            <span class="skill-item">3D Modeling</span>
+                        </div>
+                    </div>
+                    <div class="skill-category" data-aos="fade-up" data-aos-delay="300">
+                        <h3><i class="fas fa-mobile-alt"></i> Mobile & Web</h3>
+                        <div class="skill-items">
+                            <span class="skill-item">React Native</span>
+                            <span class="skill-item">React.js</span>
+                            <span class="skill-item">Node.js</span>
+                            <span class="skill-item">Firebase</span>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
 
+    <!-- AOS Animation Library -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <!-- Include JavaScript for interactivity -->
     <script src="script.js"></script>
 </body>

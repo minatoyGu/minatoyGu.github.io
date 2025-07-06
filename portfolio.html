@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Edwin Yeung</title>
+    <!-- Link to external stylesheet -->
+    <link rel="stylesheet" href="style.css?v=3">
+    <!-- Link to Google Fonts for better typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Include Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Sidebar Navigation -->
+    <aside class="sidebar">
+        <div class="logo">
+            <img src="images/EY_Icon.png" alt="Logo" class="logo-image">
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html" class="nav-link"><i class="fas fa-home"></i> <span>Home</span></a></li>
+                <li><a href="about.html" class="nav-link"><i class="fas fa-user"></i> <span>About</span></a></li>
+                <li><a href="portfolio.html" class="nav-link active"><i class="fas fa-briefcase"></i> <span>Portfolio</span></a></li>
+                <li><a href="work-experience.html" class="nav-link"><i class="fas fa-briefcase"></i> <span>Work Experience</span></a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Portfolio Header -->
+        <section class="portfolio-header">
+            <div class="container">
+                <h1 class="page-title" data-aos="fade-up">My Portfolio</h1>
+                <p class="page-subtitle" data-aos="fade-up" data-aos-delay="100">
+                    A collection of my best work across game development, mobile apps, and web applications
+                </p>
+                <!-- Portfolio Filters -->
+                <div class="portfolio-filters" data-aos="fade-up" data-aos-delay="200">
+                    <button class="filter-btn active" data-filter="all">
+                        <i class="fas fa-th"></i> All Projects
+                    </button>
+                    <button class="filter-btn" data-filter="games">
+                        <i class="fas fa-gamepad"></i> Games
+                    </button>
+                    <button class="filter-btn" data-filter="mobile">
+                        <i class="fas fa-mobile-alt"></i> Mobile Apps
+                    </button>
+                    <button class="filter-btn" data-filter="web">
+                        <i class="fas fa-globe"></i> Web Apps
+                    </button>
+                    <button class="filter-btn" data-filter="tools">
+                        <i class="fas fa-tools"></i> Tools & Extensions
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Portfolio Grid -->
+        <section class="portfolio-grid">
+            <div class="container">
+                <div class="projects-container">
+                    <!-- GAMES -->
+                    <div class="portfolio-item" data-category="games" data-aos="fade-up">
+                        <div class="portfolio-card" data-link="https://youtu.be/OLZvCbgtCnA">
+                            <div class="portfolio-image">
+                                <video src="videos/bullethellshooter_minivid.mp4" autoplay loop muted playsinline poster="images/BulletHellShooter-Icon.png" class="portfolio-video"></video>
+                            </div>
+                            <div class="portfolio-content">
+                                <h3>Bullet Hell Shooter</h3>
+                                <p>A multiplayer HTML shooter game built with WebSocket and NPM, offering real-time online gameplay and dynamic player interactions.</p>
+                                <div class="portfolio-tags">
+                                    <span class="tag">HTML</span>
+                                    <span class="tag">WebSocket</span>
+                                    <span class="tag">NPM</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="portfolio-item" data-category="games" data-aos="fade-up" data-aos-delay="100">
+                        <div class="portfolio-card" data-link="https://youtu.be/dsq6yENIN8s?si=4dB7RqaVEzCTkoA5">
+                            <div class="portfolio-image">
+                                <video src="videos/atheism_minivid.mp4" autoplay loop muted playsinline poster="images/Atheism_Icon128.jpg" class="portfolio-video"></video>
+                            </div>
+                            <div class="portfolio-content">
+                                <h3>Atheism</h3>
+                                <p>First-person hack-and-slash game with immersive combat and level design.</p>
+                                <div class="portfolio-tags">
+                                    <span class="tag">Unity</span>
+                                    <span class="tag">C#</span>
+                                    <span class="tag">Game</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- MOBILE APPS -->
+                    <div class="portfolio-item" data-category="mobile" data-aos="fade-up" data-aos-delay="300">
+                        <div class="portfolio-card" data-link="https://youtu.be/cTNCjPLctT8">
+                            <div class="portfolio-image">
+                                <img src="images/CampMate-Icon.png" alt="CampMate" class="portfolio-icon">
+                            </div>
+                            <div class="portfolio-content">
+                                <h3>CampMate</h3>
+                                <p>Mobile camping companion app with real-time weather and location services</p>
+                                <div class="portfolio-tags">
+                                    <span class="tag">React Native</span>
+                                    <span class="tag">Firebase</span>
+                                    <span class="tag">Mobile</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- WEB APPS -->
+                    <div class="portfolio-item" data-category="web" data-aos="fade-up" data-aos-delay="400">
+                        <div class="portfolio-card" data-link="https://youtu.be/bJdHsMPulwk?si=3-jQBuShUQEaCueU">
+                            <div class="portfolio-image">
+                                <video src="videos/hayasu_minivid.mp4" autoplay loop muted playsinline poster="images/Hayasu-Icon.png" class="portfolio-video"></video>
+                            </div>
+                            <div class="portfolio-content">
+                                <h3>Hayasu</h3>
+                                <p>An interactive flight visualization map designed to help users find cheap or time-specific flights, simplifying travel decisions.</p>
+                                <div class="portfolio-tags">
+                                    <span class="tag">React Native</span>
+                                    <span class="tag">Node.js</span>
+                                    <span class="tag">Visualization</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- TOOLS & EXTENSIONS -->
+                    <div class="portfolio-item" data-category="tools" data-aos="fade-up" data-aos-delay="100">
+                        <div class="portfolio-card" data-link="https://github.com/minatoyGu/RinBlock">
+                            <div class="portfolio-image">
+                                <img src="images/RinBlock-Icon.png" alt="RinBlock" class="portfolio-icon">
+                            </div>
+                            <div class="portfolio-content">
+                                <h3>RinBlock</h3>
+                                <p>A simple, privacy-friendly Chrome extension that blocks unwanted ads locally for a cleaner browsing experience.</p>
+                                <div class="portfolio-tags">
+                                    <span class="tag">Chrome Extension</span>
+                                    <span class="tag">Adblock</span>
+                                    <span class="tag">JavaScript</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="portfolio-item" data-category="tools" data-aos="fade-up" data-aos-delay="600">
+                        <div class="portfolio-card" data-link="https://github.com/minatoyGu/hovercopy">
+                            <div class="portfolio-image">
+                                <img src="images/HoverCopy-Icon.png" alt="HoverCopy" class="portfolio-icon">
+                            </div>
+                            <div class="portfolio-content">
+                                <h3>HoverCopy</h3>
+                                <p>Browser extension for enhanced copy-paste functionality with smart features</p>
+                                <div class="portfolio-tags">
+                                    <span class="tag">JavaScript</span>
+                                    <span class="tag">Chrome API</span>
+                                    <span class="tag">Extension</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="portfolio-item" data-category="tools" data-aos="fade-up" data-aos-delay="700">
+                        <div class="portfolio-card" data-link="https://github.com/minatoyGu/Removeadblockpopup">
+                            <div class="portfolio-image">
+                                <img src="images/RemovePopUp-Icon.png" alt="RemovePopUp" class="portfolio-icon">
+                            </div>
+                            <div class="portfolio-content">
+                                <h3>RemovePopUp</h3>
+                                <p>Smart browser extension that automatically detects and removes unwanted popups</p>
+                                <div class="portfolio-tags">
+                                    <span class="tag">JavaScript</span>
+                                    <span class="tag">DOM Manipulation</span>
+                                    <span class="tag">Extension</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="portfolio-item" data-category="tools" data-aos="fade-up" data-aos-delay="800">
+                        <div class="portfolio-card" data-link="https://youtu.be/891ul69UBcQ">
+                            <div class="portfolio-image">
+                                <img src="images/PokerDealer-Icon.png" alt="PokerDealer" class="portfolio-icon">
+                            </div>
+                            <div class="portfolio-content">
+                                <h3>PokerDealer</h3>
+                                <p>An physical STM32-based automated card-dealing machine that uses sensors to distribute cards efficiently and enhance gameplay.</p>
+                                <div class="portfolio-tags">
+                                    <span class="tag">STM32</span>
+                                    <span class="tag">Embedded</span>
+                                    <span class="tag">Hardware</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="contact-section">
+            <div class="container">
+                <div class="contact-content" data-aos="fade-up">
+                    <h2>Interested in Working Together?</h2>
+                    <p>I'm always open to discussing new opportunities and exciting projects.</p>
+                    <div class="contact-buttons">
+                        <a href="mailto:contact@example.com" class="btn btn-primary">
+                            <i class="fas fa-envelope"></i>
+                            Get in Touch
+                        </a>
+                        <a href="about.html" class="btn btn-secondary">
+                            <i class="fas fa-user"></i>
+                            Learn More About Me
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- AOS Animation Library -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- Include JavaScript for interactivity -->
+    <script src="script.js"></script>
+</body>
+</html> 
