@@ -257,35 +257,6 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   });
-
-  // Add loading spinner logic for portfolio videos
-  document.querySelectorAll('.portfolio-video').forEach(video => {
-    const spinner = video.parentElement.querySelector('.video-loading-spinner');
-    const imageContainer = video.parentElement;
-    if (!spinner) return;
-
-    function showLoading() {
-      spinner.style.display = 'block';
-      imageContainer.classList.add('video-loading-active');
-    }
-    function hideLoading() {
-      spinner.style.display = 'none';
-      imageContainer.classList.remove('video-loading-active');
-    }
-
-    video.addEventListener('waiting', showLoading);
-    video.addEventListener('loadstart', showLoading);
-    video.addEventListener('stalled', showLoading);
-    video.addEventListener('playing', hideLoading);
-    video.addEventListener('canplay', hideLoading);
-    video.addEventListener('canplaythrough', hideLoading);
-    video.addEventListener('pause', hideLoading);
-    video.addEventListener('ended', hideLoading);
-    // Hide spinner if video is already ready
-    if (video.readyState >= 3) {
-      hideLoading();
-    }
-  });
 });
 
 // Add IntersectionObserver for .portfolio-video
