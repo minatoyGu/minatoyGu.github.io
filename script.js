@@ -275,7 +275,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     video.addEventListener('waiting', showLoading);
     video.addEventListener('loadstart', showLoading);
+    video.addEventListener('stalled', showLoading);
     video.addEventListener('playing', hideLoading);
+    video.addEventListener('canplay', hideLoading);
+    video.addEventListener('canplaythrough', hideLoading);
     video.addEventListener('pause', hideLoading);
     video.addEventListener('ended', hideLoading);
     // Hide spinner if video is already ready
