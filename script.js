@@ -261,28 +261,26 @@ document.addEventListener('DOMContentLoaded', () => {
   // Add loading spinner logic for portfolio videos
   document.querySelectorAll('.portfolio-video').forEach(video => {
     const spinner = video.parentElement.querySelector('.video-loading-spinner');
+    const imageContainer = video.parentElement;
     if (!spinner) return;
 
-    // Show spinner when waiting/buffering/loading
-    video.addEventListener('waiting', () => {
+    function showLoading() {
       spinner.style.display = 'block';
-    });
-    video.addEventListener('loadstart', () => {
-      spinner.style.display = 'block';
-    });
-    // Hide spinner when playing or paused or ended
-    video.addEventListener('playing', () => {
+      imageContainer.classList.add('video-loading-active');
+    }
+    function hideLoading() {
       spinner.style.display = 'none';
-    });
-    video.addEventListener('pause', () => {
-      spinner.style.display = 'none';
-    });
-    video.addEventListener('ended', () => {
-      spinner.style.display = 'none';
-    });
+      imageContainer.classList.remove('video-loading-active');
+    }
+
+    video.addEventListener('waiting', showLoading);
+    video.addEventListener('loadstart', showLoading);
+    video.addEventListener('playing', hideLoading);
+    video.addEventListener('pause', hideLoading);
+    video.addEventListener('ended', hideLoading);
     // Hide spinner if video is already ready
     if (video.readyState >= 3) {
-      spinner.style.display = 'none';
+      hideLoading();
     }
   });
 });

@@ -1236,3 +1236,11 @@ main {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
 }
+
+.portfolio-image.video-loading-active {
+  background: #fff !important;
+}
+.portfolio-image.video-loading-active video {
+  opacity: 0 !important;
+  pointer-events: none;
+}
