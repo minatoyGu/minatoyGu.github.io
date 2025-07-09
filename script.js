@@ -235,7 +235,7 @@ document.addEventListener('DOMContentLoaded', () => {
         video.style.opacity = '1';
         video.style.pointerEvents = 'auto';
         video.currentTime = 0;
-        video.play();
+        video.play().catch(() => {});
       });
       card.addEventListener('mouseleave', () => {
         video.pause();
